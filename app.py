@@ -3,6 +3,17 @@ import streamlit as st
 import base64
 from openai import OpenAI
 
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #D3D3D3;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True  # 🔐 Habilita HTML (por defecto está desactivado)
+)
+
 # Function to encode the image to base64
 def encode_image(image_file):
     return base64.b64encode(image_file.getvalue()).decode("utf-8")
